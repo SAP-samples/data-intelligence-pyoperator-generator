@@ -1,3 +1,9 @@
+/*
+ * SPDX-FileCopyrightText: 2021 Thorsten Hapke <thorsten.hapke@sap.com>
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 var Generator = require('yeoman-generator');
 var memFs = require("mem-fs");
 var editor = require("mem-fs-editor");
