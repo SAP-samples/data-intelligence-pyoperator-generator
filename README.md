@@ -307,6 +307,16 @@ s2,Movie,7:19,Jorge Michel Grau,"Demián Bichir, Héctor Bonilla, Oscar Serrano,
 
 ```
 
+Modify the script_test.py for running the local test by just replacing the name of the test-file:
+```
+msg = optest.get_msgfile('netflix_titles.csv')
+```
+
+When the code is doing what you intended it should then you can upload the operator using the commandline: 
+
+```yo di-pyoperator``` and selecting 'Upload'. All the parameters have been stored when the operator was downloaded. 
+
+When the operator is sucessfully uploaded you can integrate the operator into your graph and move on with your pipeline development. 
  
 
 ## Requirements
@@ -364,7 +374,9 @@ For additional support, [ask a question in SAP Community](https://answers.sap.co
 
 ## Contributing
 
-All support is appreciated. For SAP employees I can add you to the project while for non-SAP employees I would add coding to the script and state your contribution in this section. 
+All support is appreciated. For SAP employees I can add you to the project while for non-SAP employees I would add coding to the script and state your contribution in this section.
+
+The code of the generator is in the folder [generator-di-pyoperator](./generator-di-pyoperator) where you can modify the [index.js](./generator-di-pyoperator/generators/app/index.js).
 
 ## License
 Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
