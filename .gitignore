@@ -4,6 +4,7 @@ config.yaml
 cred.yaml
 sql.txt
 .yo-rc.json
+.vscode/*
 
 # generator
 operators/

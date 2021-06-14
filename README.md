@@ -1,3 +1,4 @@
+[![REUSE status](https://api.reuse.software/badge/github.com/thhapke/generator-di-pyoperator)](https://api.reuse.software/info/github.com/thhapke/generator-di-pyoperator)
 # generator-di-pyoperator
 
 Yeoman generator for developing and testing standalone/offline SAP Data Intelligence python operators. 
