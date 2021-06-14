@@ -321,9 +321,9 @@ When the operator is sucessfully uploaded you can integrate the operator into yo
 
 ## Requirements
 
-** SAP Data Intelligence - System Management Command-Line Client (vctl) 
-** Yeoman
-** di-pyoperator (published package or use code of this repository)
+* SAP Data Intelligence - System Management Command-Line Client (vctl) 
+* Yeoman
+* di-pyoperator (published package or use code of this repository)
 
 ## Download and Installation
 
