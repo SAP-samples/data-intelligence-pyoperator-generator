@@ -250,7 +250,7 @@ Open your favourite python IDE  (In the example case it is Pycharm) and
 
 ![pyoperator](./images/pyoperator.png)
 
-All files are downloaded and the script-code has already initialized for a quick-start:
+All files are downloaded and the script-code has already been initialized for a quick-start:
 
 ![folders](./images/folders.png)
 
