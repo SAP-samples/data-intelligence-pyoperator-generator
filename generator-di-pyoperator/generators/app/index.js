@@ -33,6 +33,7 @@ function _vctl_ls(gen,op_package) {
     package_path = path.join(vflow_operators_path,operator_path)
   };
   // call vctl
+  package_path = package_path.replace(path.sep,'/')
   const vctl_ls = ['vrep','user','ls',package_path];
   const vctl_ls_out = gen.spawnCommandSync('vctl',vctl_ls,{ stdio: [process.stdout] });
   let file_list = vctl_ls_out.stdout.split("\n");
@@ -49,13 +50,15 @@ function _vctl_ls(gen,op_package) {
 };  
 
 // Mkdir VCTL file
-function _vctl_mkdir(gen,path) {
-  const vctl_mkdir = ['vrep','user','mkdir',path];
+function _vctl_mkdir(gen,newpath) {
+  newpath =  newpath.replace(path.sep,'/')
+  const vctl_mkdir = ['vrep','user','mkdir',newpath];
   gen.spawnCommandSync('vctl',vctl_mkdir);
 };
 
 // Read VCTL file
 function _vctl_read(gen,operator_path) {
+  operator_path = operator_path.replace(path.sep,'/')
   const vctl_cat = ['vrep','user','cat',operator_path];
   const vctl_cat_out = gen.spawnCommandSync('vctl',vctl_cat,{stdio: [process.stdout] });
   return vctl_cat_out.stdout
@@ -63,6 +66,7 @@ function _vctl_read(gen,operator_path) {
 
 // Put VCTL file
 function _vctl_put(gen,source_path,operator_path) {
+  operator_path = operator_path.replace(path.sep,'/')
   const vctl_put = ['vrep','user','put',source_path,operator_path];
   gen.spawnCommandSync('vctl',vctl_put);
 };

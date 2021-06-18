@@ -362,6 +362,9 @@ For developing the operators locally you do not need a git repository. I have cr
 
 Currently the up- and download only works for SAP DI operators incorporated in a package (name the operators with a preceding '.': <mypackage>.<myoperator>. It always should be a good practise to create operators belonging to a package. 
 
+### Open - backlog
+Support of operator versions. Currently no versions are supported. 
+
 ### Open due to undecided necessity: 
 
 Create new operator offline
