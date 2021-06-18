@@ -1,6 +1,6 @@
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/data-intelligence-pyoperator-generator)](https://api.reuse.software/info/github.com/SAP-samples/data-intelligence-pyoperator-generator)
 
-# Tool for Offline Developement of SAP Data Intelligence Operators
+# Tool for Offline Development of SAP Data Intelligence Operators
 
 **generator-di-pyoperator** is a Yeoman generator for developing and testing standalone/offline SAP Data Intelligence python operators. 
 
