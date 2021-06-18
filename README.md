@@ -330,7 +330,7 @@ When the operator is sucessfully uploaded you can integrate the operator into yo
 ## Download and Installation
 
 ### System Management Command-Line Client (vctl) 
-The whole interaction works with vctl. Please have a look to the [documentation](https://help.sap.com/viewer/0b99871a1d994d2ea89598fe59d16cf9/3.0.latest/en-US/b13e0b4fe2574b3881e3c7ef1ad2a640.html) for downloading the script. 
+The whole interaction works with vctl. Please have a look to the [documentation](https://help.sap.com/viewer/41b069490705457e9426b112a3f052bd/Cloud/en-US/b13e0b4fe2574b3881e3c7ef1ad2a640.html) for downloading the script. 
 
 ### YEOMAN
 Yeoman is a scaffolding tool creating the framework and templates that you need for a quick start. The generator is based on YEOMAN and you find more information who to write yeoman generators on [yeoman.io](https://yeoman.io/authoring/).
