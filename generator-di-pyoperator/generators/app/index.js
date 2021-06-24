@@ -31,13 +31,15 @@ function _vctl_ls(gen,op_package) {
   else {
     gen.log('vctl: op_package: ' + op_package);
     gen.log('type of op_package: ' + typeof op_package)
-    let operator_path = op_package.replaceAll('.',path.sep);
+    //let operator_path = op_package.replaceAll('.',path.sep);
+    let operator_path = op_package.replace(/\./g,path.sep);
     package_path = path.join(vflow_operators_path,operator_path);
   };
   // call vctl
 
   gen.log('vctl: package path: ' + package_path);
-  package_path = package_path.replaceAll(path.sep,'/');
+  //package_path = package_path.replaceAll(path.sep,'/');
+  package_path = package_path.replace(/\./g,path.sep);
   const vctl_ls = ['vrep','user','ls',package_path];
   const vctl_ls_out = gen.spawnCommandSync('vctl',vctl_ls,{ stdio: [process.stdout] });
   let file_list = vctl_ls_out.stdout.split("\n");
@@ -55,7 +57,8 @@ function _vctl_ls(gen,op_package) {
 
 // Mkdir VCTL file
 function _vctl_mkdir(gen,newpath) {
-  newpath =  newpath.replaceAll(path.sep,'/');
+  //newpath =  newpath.replaceAll(path.sep,'/');
+  newpath = newpath.replace(/\./g,path.sep);
   gen.log('vctl new dir: '+ newpath);
   const vctl_mkdir = ['vrep','user','mkdir',newpath];
   gen.spawnCommandSync('vctl',vctl_mkdir);
@@ -63,7 +66,8 @@ function _vctl_mkdir(gen,newpath) {
 
 // Read VCTL file
 function _vctl_read(gen,operator_path) {
-  operator_path = operator_path.replaceAll(path.sep,'/');
+  //operator_path = operator_path.replaceAll(path.sep,'/');
+  operator_path = operator_path.replace(/\./g,path.sep);
   gen.log('vctl read from: '+ operator_path);
   const vctl_cat = ['vrep','user','cat',operator_path];
   const vctl_cat_out = gen.spawnCommandSync('vctl',vctl_cat,{stdio: [process.stdout] });
@@ -72,7 +76,8 @@ function _vctl_read(gen,operator_path) {
 
 // Put VCTL file
 function _vctl_put(gen,source_path,operator_path) {
-  operator_path = operator_path.replaceAll(path.sep,'/');
+  //operator_path = operator_path.replaceAll(path.sep,'/');
+  operator_path = operator_path.replace(/\./g,path.sep);
   gen.log('vctl save to: '+ operator_path);
   const vctl_put = ['vrep','user','put',source_path,operator_path];
   gen.spawnCommandSync('vctl',vctl_put);
