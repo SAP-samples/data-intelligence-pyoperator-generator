@@ -5,6 +5,7 @@ cred.yaml
 sql.txt
 .yo-rc.json
 .vscode/*
+localtest/*
 
 # generator
 operators/
