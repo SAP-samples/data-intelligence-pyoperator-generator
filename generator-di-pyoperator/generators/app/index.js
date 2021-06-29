@@ -191,7 +191,7 @@ module.exports = class extends Generator {
     let operator_json_raw = fs.readFileSync(path.join(operator_path,'operator.json'),'utf8');
     let operator_json = JSON.parse(operator_json_raw);
     operator_json['description'] = this.operator_name.charAt(0).toUpperCase() + this.operator_name.slice(1);
-    operator_json['config']['$tpye'] = 'http://sap.com/vflow/'+this.package_name+'.'+this.operator_name+'.configSchema.json';
+    operator_json['config']['$type'] = 'http://sap.com/vflow/'+this.package_name+'.'+this.operator_name+'.configSchema.json';
     fs.writeFileSync(path.join(operator_path,'operator.json'), JSON.stringify(operator_json,null, 4));
 
     /*** configSchema.json ***/
@@ -440,7 +440,12 @@ api = mock_api(__file__)
       let script_test_content = '';
       if (((script_test in this.files_content)===false) || (this.options.overwrite)) {
         this.log('Create new test script: ' + script_test);
-        script_test_content = `import ${script_file.slice(0,-3)}
+        script_test_content = `import sys
+from os.path import dirname, join, abspath
+proj_dir = join(dirname(dirname(dirname(dirname(abspath(__file__))))))
+sys.path.insert(0, proj_dir)
+        
+import ${script_file.slice(0,-3)}
 from utils.mock_di_api import mock_api
 from utils.operator_test import operator_test
         
